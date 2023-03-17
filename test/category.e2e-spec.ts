@@ -1,9 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import {
-  HttpStatus,
-  INestApplication,
-  NotFoundException,
-} from '@nestjs/common';
+import { HttpStatus, INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
 import { getModelToken, MongooseModule } from '@nestjs/mongoose';
 import { CategoryModule } from '../src/modules/category/category.module';
