@@ -2,6 +2,6 @@ import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
-  imports: [MongooseModule.forRoot('mongodb://localhost/quotation-api')],
+  imports: [MongooseModule.forRoot("mongodb://mongo-server/quotation-api")],
 })
 export class ConfigModule {}
