@@ -49,9 +49,11 @@ export class CategoryController {
 
   @Delete('/:id')
   async delete(@Param('id') id: string) {
-    const category = await this.categoryModel.findById(id);
+    const category = await this.categoryModel.findOneAndDelete({ _id: id });
 
-    await category.delete();
+    if (!category) {
+      throw new NotFoundException('Category not found');
+    }
 
     return category;
   }
